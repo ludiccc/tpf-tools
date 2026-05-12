@@ -1,0 +1,85 @@
+/* =========================================================
+   Estilos base — Template TPF
+   ========================================================= */
+
+/* --- Reset mínimo --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Variables de color y tipografía --- */
+:root {
+  --color-fondo:    #ffffff;
+  --color-texto:    #111111;
+  --color-acento:   #0055ff;
+  --color-suave:    #f4f4f4;
+  --fuente-base:    system-ui, sans-serif;
+  --ancho-maximo:   900px;
+}
+
+/* --- Base --- */
+body {
+  font-family: var(--fuente-base);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* --- Layout --- */
+header, main, footer {
+  max-width: var(--ancho-maximo);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* --- Header y nav --- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  color: var(--color-acento);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* --- Secciones --- */
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.3rem; margin-bottom: 1rem; }
+
+/* --- Grilla de tarjetas --- */
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.tarjeta {
+  background: var(--color-suave);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+  color: #888;
+  font-size: 0.875rem;
+  text-align: center;
+}
