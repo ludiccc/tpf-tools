@@ -15,19 +15,25 @@ PAUSA = 0.001
 arduino = serial.Serial(PUERTO, BAUDIOS)
 time.sleep(2)
 
+proximo_envio = 0
+
 print("Enviando valores por serial. Ctrl+C para cortar.")
 
 try:
+    valor = 0
+    direccion = 1
     while True:
-        for valor in range(1, 5001):
-            arduino.write(f"{valor}\n".encode("utf-8"))
-            print(valor)
-            time.sleep(PAUSA)
+        valor += direccion
+        if valor >= 5000:
+            direccion = -1
+        elif valor <= 0:
+            direccion = 1
+        
+        print(valor)
 
-        for valor in range(5000, 0, -1):
+        if time.time() >= proximo_envio:
             arduino.write(f"{valor}\n".encode("utf-8"))
-            print(valor)
-            time.sleep(PAUSA)
+            proximo_envio = time.time() + PAUSA
 
 except KeyboardInterrupt:
     print("\nCerrando puerto serial.")
