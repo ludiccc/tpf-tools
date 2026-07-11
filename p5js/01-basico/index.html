@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p5.js — 01 Básico</title>
+    <!-- p5.js desde CDN, no requiere instalación -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js"></script>
+    <style>
+      body { margin: 0; background: #1a1a1a; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <script>
+      // setup() se ejecuta UNA sola vez al iniciar
+      function setup() {
+        createCanvas(600, 400); // ancho x alto en píxeles
+        background(30);        // color de fondo (0=negro, 255=blanco)
+      }
+
+      // draw() se ejecuta en bucle (~60 veces por segundo)
+      function draw() {
+        // --- Colores ---
+        // fill(r, g, b)        → color de relleno
+        // stroke(r, g, b)      → color de borde
+        // noStroke()           → sin borde
+        // noFill()             → sin relleno
+
+        // Círculo rojo
+        fill(220, 50, 50);
+        noStroke();
+        circle(150, 200, 120); // x, y, diámetro
+
+        // Rectángulo verde con borde blanco
+        fill(50, 180, 80);
+        stroke(255);
+        strokeWeight(3);
+        rect(260, 140, 160, 120); // x, y, ancho, alto
+
+        // Triángulo azul
+        fill(60, 120, 220);
+        noStroke();
+        triangle(500, 280, 440, 140, 560, 140); // x1,y1, x2,y2, x3,y3
+
+        // Texto
+        fill(255);
+        textSize(18);
+        textAlign(CENTER);
+        text("Figuras básicas en p5.js", width / 2, 370);
+      }
+    </script>
+  </body>
+</html>

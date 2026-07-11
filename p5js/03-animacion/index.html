@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p5.js — 03 Animación</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js"></script>
+    <style>
+      body { margin: 0; background: #1a1a1a; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <script>
+      const CANTIDAD = 8; // cantidad de círculos en el anillo
+      let angulo = 0;
+
+      function setup() {
+        createCanvas(600, 400);
+        colorMode(HSB, 360, 100, 100);
+        angleMode(RADIANS); // trabajamos con radianes (podés cambiar a DEGREES)
+      }
+
+      function draw() {
+        background(0, 0, 10, 25); // fondo semitransparente → efecto de estela
+
+        // Centro del canvas
+        let cx = width / 2;
+        let cy = height / 2;
+
+        // Radio de la órbita: oscila con sin() entre 80 y 160
+        let radio = 120 + sin(frameCount * 0.02) * 40;
+
+        for (let i = 0; i < CANTIDAD; i++) {
+          // Distribuimos los círculos uniformemente en la circunferencia
+          let theta = angulo + (TWO_PI / CANTIDAD) * i;
+
+          let x = cx + cos(theta) * radio;
+          let y = cy + sin(theta) * radio;
+
+          // Matiz varía según el índice y el tiempo
+          let h = (frameCount * 1.5 + (360 / CANTIDAD) * i) % 360;
+          let tamanio = 20 + sin(frameCount * 0.05 + i) * 10;
+
+          fill(h, 80, 100);
+          noStroke();
+          circle(x, y, tamanio);
+        }
+
+        // Incrementamos el ángulo para hacer girar todo el conjunto
+        angulo += 0.02;
+
+        // Info
+        colorMode(RGB, 255);
+        fill(255, 180);
+        noStroke();
+        textSize(13);
+        textAlign(LEFT);
+        text("frameCount: " + frameCount, 10, 20);
+        text("frameRate:  " + round(frameRate()) + " fps", 10, 38);
+        colorMode(HSB, 360, 100, 100);
+      }
+    </script>
+  </body>
+</html>
