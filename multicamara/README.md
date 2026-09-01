@@ -14,6 +14,12 @@ pip install -r requirements.txt
 python multicamara.py
 ```
 
+Para usar la variante con rastro acumulativo:
+
+```bash
+python multicamara-con-delay.py
+```
+
 Las camaras deben aparecer como los dispositivos `0` y `1` de OpenCV. Ambas deben aceptar la resolucion `640x480`; si una no la entrega, el programa termina para evitar que las vistas queden desparejas.
 
 ## Controles
@@ -27,5 +33,11 @@ Las camaras deben aparecer como los dispositivos `0` y `1` de OpenCV. Ambas debe
 - `q` o `Esc`: salir.
 
 La correccion usa `cv2.getPerspectiveTransform` y `cv2.warpPerspective`: el cuadrilatero elegido se transforma en todo el rectangulo de salida `640x480`.
+
+## Variante con delay
+
+`multicamara-con-delay.py` conserva un rastro de las imagenes anteriores cuando no esta en modo edicion. Usa un lienzo persistente independiente para cada camara y parte de una imagen limpia al confirmar una nueva calibracion con `Enter`.
+
+En esta variante, `p` activa o desactiva el pixelado y `+` / `-` cambian la cantidad de pixels a lo ancho. Menos pixels producen una imagen mas pixelada.
 
 Al presionar `Enter`, las esquinas de las dos camaras se guardan en `multicamara.json`, dentro de esta misma carpeta. El archivo se carga automaticamente al iniciar la aplicacion, por lo que las correcciones confirmadas quedan activas entre ejecuciones.
