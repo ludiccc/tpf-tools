@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>p5.js — 02 Interactivo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js"></script>
+    <style>
+      body { margin: 0; background: #1a1a1a; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <script>
+      let bgColor;      // color de fondo actual
+      let brushSize;    // tamaño del pincel
+
+      function setup() {
+        createCanvas(600, 400);
+        bgColor = color(30);
+        brushSize = 30;
+        background(bgColor);
+      }
+
+      function draw() {
+        // Mientras el mouse esté presionado, dibujamos
+        if (mouseIsPressed) {
+          // Mapeamos la posición X del mouse a un matiz de color (0-360)
+          let h = map(mouseX, 0, width, 0, 360);
+          colorMode(HSB, 360, 100, 100, 100);
+          fill(h, 80, 95, 70);
+          noStroke();
+          circle(mouseX, mouseY, brushSize);
+          colorMode(RGB, 255); // volvemos al modo RGB por defecto
+        }
+
+        // Instrucciones en pantalla
+        fill(255, 200);
+        noStroke();
+        textSize(13);
+        textAlign(LEFT);
+        text("Clic + arrastrar → pintar", 10, 20);
+        text("Tecla C → limpiar", 10, 38);
+        text("↑ ↓ → cambiar tamaño del pincel: " + brushSize, 10, 56);
+      }
+
+      // keyPressed() se llama cada vez que se presiona una tecla
+      function keyPressed() {
+        if (key === "c" || key === "C") {
+          // Limpiamos el canvas
+          background(30);
+        }
+        if (keyCode === UP_ARROW) {
+          brushSize = min(brushSize + 5, 100);
+        }
+        if (keyCode === DOWN_ARROW) {
+          brushSize = max(brushSize - 5, 5);
+        }
+      }
+    </script>
+  </body>
+</html>
