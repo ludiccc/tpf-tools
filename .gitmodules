@@ -1,0 +1,3 @@
+[submodule "mediapipe_for_installations"]
+	path = mediapipe_for_installations
+	url = https://github.com/ludiccc/mediapipe_for_installations.git
