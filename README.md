@@ -2,9 +2,11 @@
 
 [🇬🇧 English version](README_en.md)
 
-Herramientas y ejemplos para **Taller de Producción Final** (Taller 5 / TPF), licenciatura en Diseño Multimedial, Universidad Nacional de La Plata. Más información sobre la materia: [Taller 5](https://taller5.ludic.cc) · [www.ludic.cc](https://www.ludic.cc)
+Herramientas y ejemplos para la **enseñanza y el aprendizaje de herramientas básicas de captura de imágenes** (cámaras, visión por computadora, seguimiento de personas y gestos) y su uso en **instalaciones interactivas**.
 
-Este repositorio reúne ejemplos sencillos para conectar software, cámaras, sonido y hardware en instalaciones de arte electrónico/digital/robótico. Son de **uso académico**: sirven como punto de partida y no como referencia formal de las tecnologías que usan.
+Los trabajos iniciales de este proyecto surgen de la experiencia en la materia **Taller 5 - Taller de Proyecto Final** (más información: [Taller 5](https://taller5.ludic.cc) · [www.ludic.cc](https://www.ludic.cc)), pero es un **proyecto abierto a la comunidad**: docentes, estudiantes, artistas y desarrolladores pueden usarlo, adaptarlo y contribuir.
+
+Reúne ejemplos sencillos para conectar software, cámaras, sonido y hardware en instalaciones de arte electrónico/digital/robótico. Son de **uso educativo**: sirven como punto de partida y no como referencia formal de las tecnologías que usan.
 
 ## Contenido
 

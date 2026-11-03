@@ -2,9 +2,11 @@
 
 [🇦🇷 Versión en castellano](README.md)
 
-Tools and examples for the **Final Production Workshop** (Taller 5 / TPF), degree in Multimedia Design, Universidad Nacional de La Plata. More about the subject: [Taller 5](https://taller5.ludic.cc) · [www.ludic.cc](https://www.ludic.cc)
+Tools and examples for **teaching and learning basic image-capture tools** (cameras, computer vision, people and gesture tracking) and using them in **interactive installations**.
 
-This repository gathers simple examples to connect software, cameras, sound and hardware in electronic/digital/robotic art installations. They are for **academic use**: they are starting points, not a formal reference for the technologies they use.
+The project's initial work grew out of the experience of the course **Taller 5 - Final Project Workshop** (more information: [Taller 5](https://taller5.ludic.cc) · [www.ludic.cc](https://www.ludic.cc)), but it is a **project open to the community**: teachers, students, artists and developers are welcome to use it, adapt it and contribute.
+
+It gathers simple examples to connect software, cameras, sound and hardware in electronic/digital/robotic art installations. They are for **educational use**: they are starting points, not a formal reference for the technologies they use.
 
 ## Contents
 
