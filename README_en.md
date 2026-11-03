@@ -72,6 +72,16 @@ git submodule update --init --recursive
 
 Several examples are designed to be combined through **OSC** (port `12000` by default in this material): `mediapipe_osc.py` or `simuladorDeEspacios_001` act as senders, and Processing, Arduino (via Python), TouchDesigner or other software as receivers.
 
+## License
+
+Copyright (C) 2026 Federico Joselevich
+
+This project is distributed under the [Mozilla Public License 2.0](LICENSE.md) (MPL-2.0). You may use, modify and redistribute the code and derivative works, including inside projects under other licenses, as long as attribution to the original author is preserved and modifications to files covered by this license are published under the same MPL-2.0. It is distributed **without any warranty**.
+
+The `mediapipe_for_installations` submodule is a separate repository, also under MPL-2.0 (see [its repository](https://github.com/ludiccc/mediapipe_for_installations)). External dependencies (for example MediaPipe, OpenCV, Processing) keep their own licenses.
+
+See also the [ROADMAP](ROADMAP.md).
+
 ## Contact
 
 [www.ludic.cc](https://www.ludic.cc) · [Taller 5](https://taller5.ludic.cc)

@@ -1,0 +1,30 @@
+# Credenciales y secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets*
+credentials*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Processing
+**/application.*/
+**/out/
+
+# Arduino
+*.hex
+*.elf
+
+# Sistema e IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
